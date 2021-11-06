@@ -1,6 +1,7 @@
 {
   "name": "@flourd/toml",
-  "version": "1.0.0-next.1",
+  "version": "1.0.0-next.2",
+  "private": false,
   "author": {
     "name": "Nicholas Berlette",
     "email": "hi@flourd.com",
@@ -8,6 +9,10 @@
   },
   "license": "ISC",
   "description": "Familiar parse and stringify for TOML, with a CLI to convert to/from JSON.",
+  "publishConfig": {
+    "access": "public",
+    "tag": "next"
+  },
   "main": "./index.js",
   "module": "./index.mjs",
   "esnext": "./index.mjs",
@@ -102,9 +107,9 @@
     "decoder"
   ],
   "dependencies": {
+    "arg": "~5.0.1",
     "kleur": "4.1.4",
-    "sade": "1.7.4",
-    "arg": "~5.0.1"
+    "sade": "1.7.4"
   },
   "devDependencies": {
     "ansi": "^0.3.1",
