@@ -1,0 +1,150 @@
+{
+  "name": "@flourd/toml",
+  "version": "1.0.0-next.1",
+  "author": {
+    "name": "Nicholas Berlette",
+    "email": "hi@flourd.com",
+    "url": "https://flourd.com/pkg/toml"
+  },
+  "license": "ISC",
+  "description": "Familiar parse and stringify, for TOML. Now with a basic CLI that converts to/from JSON.",
+  "main": "./index.js",
+  "module": "./index.mjs",
+  "esnext": "./index.mjs",
+  "types": "./index.d.ts",
+  "exports": {
+    ".": {
+      "import": "./index.mjs",
+      "require": "./index.js",
+      "default": "./index.js"
+    },
+    "./lib": {
+      "import": "./lib/toml.mjs",
+      "require": "./lib/toml.js",
+      "default": "./lib/toml.js"
+    },
+    "./error": {
+      "import": "./lib/error.mjs",
+      "require": "./lib/error.js",
+      "default": "./lib/error.js"
+    },
+    "./utils": {
+      "import": "./lib/utils/index.mjs",
+      "require": "./lib/utils/index.js",
+      "default": "./lib/utils/index.js"
+    },
+    "./stringify": {
+      "import": "./lib/parse/index.mjs",
+      "require": "./lib/parse/index.js",
+      "default": "./lib/parse/index.js"
+    },
+    "./parser": {
+      "import": "./lib/parser/index.mjs",
+      "require": "./lib/parser/index.js",
+      "default": "./lib/parser/index.js"
+    },
+    "./parse": {
+      "import": "./lib/parse/index.mjs",
+      "require": "./lib/parse/index.js",
+      "default": "./lib/parse/index.js"
+    },
+    "./parse/stream": {
+      "import": "./lib/parse/stream.mjs",
+      "require": "./lib/parse/stream.js",
+      "default": "./lib/parse/stream.js"
+    },
+    "./parse/async": {
+      "import": "./lib/parse/async.mjs",
+      "require": "./lib/parse/async.js",
+      "default": "./lib/parse/async.js"
+    },
+    "./parse/prettyError": {
+      "import": "./lib/parse/pretty-error.mjs",
+      "require": "./lib/parse/pretty-error.js",
+      "default": "./lib/parse/pretty-error.js"
+    },
+    "./parse/string": {
+      "import": "./lib/parse/string.mjs",
+      "require": "./lib/parse/string.js",
+      "default": "./lib/parse/string.js"
+    },
+    "./parser/debug": {
+      "import": "./lib/parser-debug.mjs",
+      "require": "./lib/parser-debug.js",
+      "default": "./lib/parser-debug.js"
+    },
+    "./cli": {
+      "import": "./bin/toml.mjs",
+      "require": "./bin/toml.js",
+      "default": "./bin/toml.js"
+    },
+    "./package.json": "./package.json",
+    "./types": "./index.d.ts"
+  },
+  "bin": {
+    "toml": "./bin/parse.js"
+  },
+  "scripts": {
+    "test": "tap -J --100 test/*.js test/toml-stream/*.js",
+    "prerelease": "yarn test",
+    "prepack": "rm -f *~",
+    "postpublish": "git push --follow-tags"
+  },
+  "keywords": [
+    "toml",
+    "toml-parser",
+    "toml-stringifier",
+    "parser",
+    "stringifer",
+    "emitter",
+    "ini",
+    "tomlify",
+    "encoder",
+    "decoder"
+  ],
+  "dependencies": {
+    "kleur": "4.1.4",
+    "sade": "1.7.4",
+    "arg": "~5.0.1"
+  },
+  "devDependencies": {
+    "@iarna/standard": "^2.0.2",
+    "@ltd/j-toml": "^0.5.107",
+    "ansi": "^0.3.1",
+    "approximate-number": "^2.0.0",
+    "glob": "^7.1.2",
+    "js-yaml": "^3.13.1",
+    "rimraf": "^2.6.2",
+    "tap": "^12.0.1",
+    "toml": "^3.0.0"
+  },
+  "files": [
+    "index.js",
+    "index.mjs",
+    "index.d.ts",
+    "bin",
+    "bin/*",
+    "lib",
+    "lib/*",
+    "lib/**/*"
+  ],
+  "directories": {
+    "bin": "bin",
+    "test": "test"
+  },
+  "repository": "flourd/toml",
+  "bugs": "https://github.com/flourd/toml/issues",
+  "readme": "https://github.com/flourd/toml#readme",
+  "homepage": "https://flourd.com/pkg/toml",
+  "prettier": {
+    "arrowParens": "always",
+    "tabWidth": 2,
+    "useTabs": false,
+    "bracketSpacing": true,
+    "printWidth": 100,
+    "trailingComma": "es5",
+    "semi": false,
+    "singleQuote": true,
+    "bracketSameLine": true
+  }
+}
